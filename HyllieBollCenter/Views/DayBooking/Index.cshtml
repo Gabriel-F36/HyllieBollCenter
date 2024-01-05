@@ -1,0 +1,62 @@
+﻿@model IEnumerable<DayBooking>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@foreach (var item in Model)
+{
+    <div class="row mb-3 text-center">
+        <div class="col-2">The day</div>
+        @if (@item.NineToElevenId != null)
+        {
+            <div class="col-2"><a asp-controller=""class="btn btn-secondary my-2">09:00 - 11:00</a></div>
+        }
+        else
+        {
+            <div class="col-2"><a class="btn btn-primary my-2">09:00 - 11:00</a></div>
+        }
+
+        @if (@item.ElevenToThirteenId != null)
+        {
+            <div class="col-2"><a class="btn btn-secondary my-2">11:00 - 13:00</a></div>
+        }
+        else
+        {
+            <div class="col-2"><a class="btn btn-primary my-2">11:00 - 13:00</a></div>
+        }
+
+        @if (@item.ThirteenToFifteenId != null)
+        {
+            <div class="col-2"><a class="btn btn-secondary my-2">13:00 - 15:00</a></div>
+        }
+        else
+        {
+            <div class="col-2"><a class="btn btn-primary my-2">13:00 - 15:00</a></div>
+        }
+
+        @if (@item.FifteenToSeventeenId != null)
+        {
+            <div class="col-2"><a class="btn btn-secondary my-2">15:00 - 17:00</a></div>
+        }
+        else
+        {
+            <div class="col-2"><a class="btn btn-primary my-2">15:00 - 17:00</a></div>
+        }
+
+        @if (@item.SeventeenToNineteenId != null)
+        {
+            <div class="col-2"><a class="btn btn-secondary my-2">17:00 - 19:00</a></div>
+        }
+        else
+        {
+            <div class="col-2"><a class="btn btn-primary my-2">17:00 - 19:00</a></div>
+        }
+        @* 
+        <div class="col-2"><a class="btn btn-secondary my-2">@item.ElevenToThirteenId</a></div>
+        <div class="col-2"><a class="btn btn-secondary my-2">13:00 - 15:00</a></div>
+        <div class="col-2"><a class="btn btn-secondary my-2">15:00 - 17:00</a></div>
+        <div class="col-2"><a class="btn btn-secondary my-2">17:00 - 19:00</a></div> *@
+    </div>
+}
